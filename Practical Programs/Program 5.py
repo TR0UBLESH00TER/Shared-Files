@@ -1,11 +1,14 @@
-# 5. WAF to check whether a string is palindrome or not
-def isPalindrome(String1):
-    String2=""
-    for i in String1:
-        String2 = i+String2
-    if String1 == String2:
-        print(String1,"is a palindrome.")
+# 5. Write a function to whether a string is palindrome or not.
+def Check_Palindrome(string):
+    """Returns reversed string."""
+    reverse_string = ""
+    for i in string:
+        reverse_string = i+reverse_string
+    if reverse_string == string:
+        return True
     else:
-        print(String1,"is not a palindrome.")
-isPalindrome("hello")
-isPalindrome("racecar")
+        return False
+
+# Invoking Function
+print(Check_Palindrome('level'))
+print(Check_Palindrome('python'))

@@ -1,11 +1,15 @@
-# 1. WAF to find the factorial of a number.
+# 1. Write a function to find the factorial of a function.
 def factorial(number):
+    """Returns the factorial of the number."""
     if number == 0:
         return 1
     else:
-        factorial = 1
-        for i in range(1,number+1):
-            factorial *= i
-        return factorial
+        product = 1
+        while number !=0:
+            product *= number
+            number -=1
+        return product
 
-print(factorial(5),factorial(0),factorial(1))
+# Invoking function
+print(factorial(5))
+print(factorial(10))

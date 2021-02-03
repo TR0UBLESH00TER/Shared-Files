@@ -8,7 +8,7 @@
 3.	Write a Python program  `remdup( l )` to remove duplicates from a list.
 4.	Write a function to search a given word in a string.
 5.	Write a function to check whether a string is Palindrome or not.
-6.	Write a function to find the occurance of a word in a string.
+6.	Write a function to find the occurrence of a word in a string.
 7.	Write a function to compute n terms of Fibonacci number.
 8.	Write a function to display sum of even numbers or sum of odd numbers in a list, based on users choice.
 9.	Write a program to read and display the file content line by line with each word separated by “#”
@@ -24,26 +24,26 @@
 19.	Write a program to connect with database and to fetch the record from EMP table based on the condition specified by user.
 20.	Write a program to connect with database and to delete the record from EMP table based on the entered Emp no (if found).
 
-<br /> *The table Emp used in 17, 18, 19, 20:*
+<br /> *The table EMP used in 17, 18, 19, 20:*
 ```mysql
-mysql> DESC Emp;
-+--------+-------------+------+-----+---------+-------+
-| Field  | Type        | Null | Key | Default | Extra |
-+--------+-------------+------+-----+---------+-------+
-| Empno  | int(2)      | NO   | PRI | NULL    |       | 
-| Name   | varchar(20) | NO   |     | NULL    |       | 
-| Dept   | varchar(10) | YES  |     | NULL    |       | 
-| Salary | int(9)      | YES  |     | NULL    |       | 
-+--------+-------------+------+-----+---------+-------+
+mysql> DESC EMP;
++---------------+-------------+------+-----+---------+-------+
+| Field         | Type        | Null | Key | Default | Extra |
++---------------+-------------+------+-----+---------+-------+
+| Employee_ID   | int(5)      | NO   | PRI | NULL    |       |
+| Employee_Name | varchar(30) | YES  |     | NULL    |       |
+| Salary        | int(10)     | YES  |     | NULL    |       |
+| Department    | varchar(10) | YES  |     | NULL    |       |
++---------------+-------------+------+-----+---------+-------+
 
-mysql> SELECT * FROM Emp;
-+-------+--------+-------+--------+ 
-| Empno | Name   | Dept  | Salary | 
-+-------+--------+-------+--------+ 
-|     1 | Ravi   | Sales |  24000 | 
-|     2 | Sunny  | Sales |  35000 | 
-|     3 | Shobit | IT    |  30000 | 
-|     4 | Vikram | IT    |  40000 | 
-|     5 | Adam   | HR    |  50000 | 
-+-------+--------+-------+--------+ 
+mysql> SELECT * FROM EMP;
++-------------+---------------+--------+------------+
+| Employee_ID | Employee_Name | Salary | Department |
++-------------+---------------+--------+------------+
+|           1 | Edward        |  24000 | Sales      |
+|           2 | James         |  35000 | Sales      |
+|           3 | Harry         |  30000 | IT         |
+|           4 | William       |  40000 | IT         |
+|           5 | Peter         |  50000 | HR         |
++-------------+---------------+--------+------------+
 ```

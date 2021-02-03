@@ -1,15 +1,13 @@
-# 6. Write a function to find the occurance of a word in a string
-def occurance(check,string):
-    L = string.split()
+# 6. Write a function to find the occurrence of a word in a string.
+def word_occurrence(string,word):
+    """Returns the number of times the word occured in the given string."""
+    string_list=string.split(" ")
     count = 0
-    for i in L:
-        if i == check:
-            count += 1
-    if count == 0:
-        print("Word not found")
-    else:
-        print("The given word occurs",count,"times in the string.")
+    for i in range(0,len(string_list)):
+        if string_list[i].startswith(word):
+            count+=1
+    return count
 
-occurance("hello","hello ppl hello world")
-occurance("no","Hello World")
-        
+# Invoking Function
+print(word_occurrence("hello ppl hello world","hello"))
+print(word_occurrence("Hello World","no"))

@@ -1,16 +1,18 @@
-# 2. Write a function to accept a number from user and to check whether it is prime or not.
-def isPrime(number):
-    if number>1:
-        for i in range(2,number//2):
-            if number%i==0:
-                print(number,"is not a prime number.")
+# 2. WAF to accept a number from user and to check whether it is Prime or not
+def Check_Prime(number):
+    """Returns True if prime and False if not prime"""
+    if number == 1:
+        return False # 1 is Neither Prime nor Composite
+    elif number in (2,3):
+        return True
+    else:
+        for i in range(2,int((number**0.5))+1):
+            if number % i == 0:
+                return False
                 break
         else:
-            print(number, "is a prime number.")
-    else:
-        print(number,"is not a prime number.")
+            return True
 
-isPrime(3)
-isPrime(407)
-isPrime(2)
-isPrime(35)
+# Invoking function
+print(Check_Prime(123))
+print(Check_Prime(1279))

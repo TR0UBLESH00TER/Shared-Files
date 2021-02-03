@@ -1,15 +1,15 @@
 # 18. Write a program to connect with database and search an employee number in the table EMP and to display record. 
 # If  employee number not found then appropriate message to be displayed.
 import mysql.connector as sql
-conn = sql.connect(host = 'localhost', user = 'root', passwd = 'mysql', database = '12b')
-cursor = conn.cursor()
-query = "SELECT * FROM Emp"
-cursor.execute(query)
+db = sql.connect(host = "localhost", user ="root", password="mysql",database ="12b_practical",charset="utf8")
+cursor = db.cursor()
+cursor.execute("SELECT * FROM EMP;")
 data = cursor.fetchall()
-search = int(input("Enter the Employee Number to search: "))
-for row in data:
-    if row[0] == search:
-        print(row)
+Emp_ID = int(input("Enter Employee ID to search: "))
+for i in data:
+    if i[0] == Emp_ID:
+        print("Record found!")
+        print(i)
         break
 else:
-    print("Data not found.")
+    print("Record not found.")

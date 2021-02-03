@@ -17,7 +17,7 @@ def Pop(S):
     else:
         val = S.pop()
         if len(S) == 0:
-            top = None
+            top = -1
         else:
             top = len(S)-1
         return val
@@ -36,28 +36,32 @@ def Show(S):
         t = len(S)-1
         print("(Top)",end=" ")
         while t>=0:
-            print(S[t],"<==",end=" ")
+            print(S[t],"<=",end=" ")
             t -= 1
         print()
 
-#Main
-S = []
-top = None
-while True:
-    print("---- STACK DEMONSTRATION ----")
+def menu():
+    global ch
+    print("---- STACK in Python----")
     print("     1. PUSH")
     print("     2. POP")
     print("     3. PEEK")
     print("     4. SHOW STACK")
     print("     0. EXIT")
     ch = int(input("Enter your choice: "))
+
+#Main
+S = []
+top = None
+while True:
+    menu()
     if ch == 1:
         val = int(input("Enter Item to Push: "))
         Push(S,val)
     elif ch == 2:
         val = Pop(S)
         if val == "Underflow":
-            print("Stack")
+            print("Stack is Empty")
     elif ch == 3:
         val = Peek(S)
         if val == "Underflow":
