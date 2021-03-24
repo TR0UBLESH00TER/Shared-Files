@@ -12,7 +12,7 @@ def Check_Prime(number):
             return True
 
 # Invoking function
-print(Check_Prime(123))
-print(Check_Prime(1279))
+print(CheckPrime(123))
+print(CheckPrime(1279))
 print(CheckPrime(15485863))
 print(CheckPrime(153485863))
